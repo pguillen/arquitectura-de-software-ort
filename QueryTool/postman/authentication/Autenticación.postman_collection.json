@@ -1,0 +1,159 @@
+{
+	"info": {
+		"_postman_id": "fbe0f2e1-c52a-401d-b2bc-6c4610001d4e",
+		"name": "Autenticación",
+		"description": "Contiene el acceso a los métodos de creación de usuario (Sign Up), login y logout.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Sign Up",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/x-www-form-urlencoded"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "nombre",
+							"value": "Wilson",
+							"description": "Nombre del usuario *",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "wilson@mail.com",
+							"description": "Email del usuario *",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "123456",
+							"description": "Contraseña del usuario *",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3031/api/v1/auth/signup/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3031",
+					"path": [
+						"api",
+						"v1",
+						"auth",
+						"signup",
+						""
+					]
+				},
+				"description": "Permite crear un nuevo usuario que interactuará con el sistema.\n\nPara ello se envía un POST, en el apartado Body se selecciona \"x-www-form-urlencoded\", y se crean tres KEY's con sus VALUE's correspondientes.\nLas KEY's serán:\nnombre, email y password.\nEl email será único e identificará al usuario.\nEn caso de ingresar un email ya registrado en nuestra base de datos de usuarios, se retornará un mensaje de error.\n\nLos campos marcados con * son obligatorios."
+			},
+			"response": []
+		},
+		{
+			"name": "Info de usuario",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3031/api/v1/auth/userinfo/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3031",
+					"path": [
+						"api",
+						"v1",
+						"auth",
+						"userinfo",
+						""
+					]
+				},
+				"description": "Muestra la información del usuario que está logueado."
+			},
+			"response": []
+		},
+		{
+			"name": "Logout",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3031/api/v1/auth/logout/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3031",
+					"path": [
+						"api",
+						"v1",
+						"auth",
+						"logout",
+						""
+					]
+				},
+				"description": "Permite cerrar la sesión del usuario."
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "email",
+							"value": "wilson@mail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "123456",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3031/api/v1/auth/login/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3031",
+					"path": [
+						"api",
+						"v1",
+						"auth",
+						"login",
+						""
+					]
+				},
+				"description": "Permite al usuario realizar login y acceder a visualizar los recursos resultantes de las consultas.\n\nEn la pestaña Body se debe marcar la opción ¨x-www-form-urlencoded¨, y se ingresan dos KEY's: email y password. Para cada una se ingresa el VALUE correspondiente.\nSi se ingresan credenciales incorrectas o correspondientes a un usuario inexistente, se devolverá un mensaje de error."
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

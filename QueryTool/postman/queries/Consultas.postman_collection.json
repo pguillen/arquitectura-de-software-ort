@@ -1,0 +1,259 @@
+{
+	"info": {
+		"_postman_id": "cfe746c6-76bc-4bd7-a7fc-99d2e60ab1a0",
+		"name": "Consultas",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Query 1",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3031/api/v1/flight/q1/?fecha_desde=2019-10-26T17:03:37.343&fecha_hasta=2019-12-26T17:03:37.343",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3031",
+					"path": [
+						"api",
+						"v1",
+						"flight",
+						"q1",
+						""
+					],
+					"query": [
+						{
+							"key": "fecha_desde",
+							"value": "2019-10-26T17:03:37.343",
+							"description": "Delimita fecha más antigua de la consulta"
+						},
+						{
+							"key": "fecha_hasta",
+							"value": "2019-12-26T17:03:37.343",
+							"description": "Delimita fecha más nueva de la consulta"
+						}
+					]
+				},
+				"description": "Comparación de la puntualidad de vuelos por aerolínea entre dos fechas en base al campo DEPARTURE_DELAY (cantidad de vuelos computados, promedio de demora, demora máxima, y demora mínima)"
+			},
+			"response": []
+		},
+		{
+			"name": "Query 2",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3031/api/v1/flight/q2/?fecha_desde=2019-10-26T17:03:37.343&fecha_hasta=2019-12-26T17:03:37.343",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3031",
+					"path": [
+						"api",
+						"v1",
+						"flight",
+						"q2",
+						""
+					],
+					"query": [
+						{
+							"key": "fecha_desde",
+							"value": "2019-10-26T17:03:37.343",
+							"description": "Delimita fecha más antigua de la consulta"
+						},
+						{
+							"key": "fecha_hasta",
+							"value": "2019-12-26T17:03:37.343",
+							"description": "Delimita fecha más nueva de la consulta"
+						}
+					]
+				},
+				"description": "Cancelaciones por aeropuerto y aerolínea entre dos fechas registradas con CANCELLATION_REASON siendo nulo. Como parte del request se indican los campos que se deben incluir en la respuesta."
+			},
+			"response": []
+		},
+		{
+			"name": "Query 3",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3031/api/v1/flight/q3/?fecha_desde=2019-10-26T17:03:37.343&fecha_hasta=2019-12-26T17:03:37.343",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3031",
+					"path": [
+						"api",
+						"v1",
+						"flight",
+						"q3",
+						""
+					],
+					"query": [
+						{
+							"key": "fecha_desde",
+							"value": "2019-10-26T17:03:37.343",
+							"description": "Delimita fecha más antigua de la consulta"
+						},
+						{
+							"key": "fecha_hasta",
+							"value": "2019-12-26T17:03:37.343",
+							"description": "Delimita fecha más nueva de la consulta"
+						}
+					]
+				},
+				"description": "Número de cancelaciones por aeropuerto, aerolínea y CANCELLATION_REASON (no siendo nulo) entre dos fechas registradas. Como parte del request se indican los campos que se deben incluir en la respuesta."
+			},
+			"response": []
+		},
+		{
+			"name": "Query 4",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3031/api/v1/flight/q4/?fecha_desde=2019-10-26T17:03:37.343&fecha_hasta=2019-12-26T17:03:37.343",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3031",
+					"path": [
+						"api",
+						"v1",
+						"flight",
+						"q4",
+						""
+					],
+					"query": [
+						{
+							"key": "fecha_desde",
+							"value": "2019-10-26T17:03:37.343",
+							"description": "Delimita fecha más antigua de la consulta"
+						},
+						{
+							"key": "fecha_hasta",
+							"value": "2019-12-26T17:03:37.343",
+							"description": "Delimita fecha más nueva de la consulta"
+						}
+					]
+				},
+				"description": "Número de vuelos Derivados por aerolínea y entre dos fechas. Como parte del request se indican los campos que se deben incluir en la respuesta.\r\n"
+			},
+			"response": []
+		},
+		{
+			"name": "Query 5",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "5231fb10-8d48-48b7-8248-5127f345aa1d",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3031/api/v1/airline/q5/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3031",
+					"path": [
+						"api",
+						"v1",
+						"airline",
+						"q5",
+						""
+					]
+				},
+				"description": "Consulta de datos de las aerolíneas. Retorna todos los datos de cada aerolínea en la tabla de airlines."
+			},
+			"response": []
+		},
+		{
+			"name": "Query 6",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3031/api/v1/airport/q6/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3031",
+					"path": [
+						"api",
+						"v1",
+						"airport",
+						"q6",
+						""
+					]
+				},
+				"description": "Consulta de datos de los aeropuertos. Retorna todos los datos de cada aeropuerto en la tabla de airports."
+			},
+			"response": []
+		},
+		{
+			"name": "Query 7",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": []
+				},
+				"url": {
+					"raw": "http://localhost:3031/api/v1/q7/q7/?collection=airlines",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3031",
+					"path": [
+						"api",
+						"v1",
+						"q7",
+						"q7",
+						""
+					],
+					"query": [
+						{
+							"key": "collection",
+							"value": "airlines",
+							"description": "Como valor para VALUE ingrese: airlines, airports o flights"
+						}
+					]
+				},
+				"description": "Consulta de los metadatos de cada tabla. Dado el nombre de una fuente de datos (Airlines, Airports, Flights) retorna para cada campo de la tabla el tipo de dato con el cual está almacenada la información."
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

@@ -1,0 +1,25 @@
+{
+  "name": "QueryTool",
+  "version": "1.0.0",
+  "description": "Este componente se encarga de recibir requests correspondientes a las 7 queries solicitadas para el proyecto.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt-nodejs": "0.0.3",
+    "chalk": "^3.0.0",
+    "connect-mongo": "^3.1.2",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-session": "^1.17.0",
+    "moment": "^2.24.0",
+    "mongoose": "^5.7.12",
+    "nodemon": "^2.0.1",
+    "passport": "^0.4.0",
+    "passport-local": "^1.0.0"
+  }
+}

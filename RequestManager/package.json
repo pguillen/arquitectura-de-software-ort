@@ -1,0 +1,31 @@
+{
+  "name": "requestmanager",
+  "version": "1.0.0",
+  "description": "Servicio para recibir y procesar los datos en el BackEnd",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error, no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ORTArqSoft/guillen_salinas_sisto.git"
+  },
+  "author": "Pablo D. Guillen",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ORTArqSoft/guillen_salinas_sisto/issues"
+  },
+  "homepage": "https://github.com/ORTArqSoft/guillen_salinas_sisto#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "bull": "^3.12.1",
+    "bull-arena": "^2.6.4",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "module": "^1.2.5",
+    "mongoose": "^5.7.11",
+    "multer": "^1.4.2",
+    "uuid": "^3.3.3",
+    "winston": "^3.2.1"
+  }
+}
